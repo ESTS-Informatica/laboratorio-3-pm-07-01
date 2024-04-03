@@ -9,10 +9,10 @@ public class Transport {
 
     private static int auto = 0; 
 
-    private final String id;
+    protected final String id;
     private String origin;
     private String destination;
-    private double price;
+    protected double price;
     protected double fees;
     private boolean available;
 
@@ -20,8 +20,8 @@ public class Transport {
         this.id = "T-" + String.format("%03d", ++auto);
         this.origin = "";
         this.destination = "";
-        this.price = 0.0;
-        this.fees = 0.0;
+        this.price = 0.00;
+        this.fees = 0.00;
         this.available = true;
     }
 

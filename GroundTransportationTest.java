@@ -18,6 +18,7 @@ public class GroundTransportationTest {
     @BeforeEach
     public void setUp() {
         groundTransport = new GroundTransportation("ABC123");
+        groundTransport.setFees(3.00);
     }
 
     @Test

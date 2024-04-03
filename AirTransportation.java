@@ -39,7 +39,18 @@ public class AirTransportation extends Transport
     @Override
     public double getFees() 
     {
-        return this.fees * 0.04 ;
+        return this.price * 0.04 ;
+    }
+    
+    public double getPriceWithFees()
+    {
+        return super.price + getFees();
+    }
+    
+    @Override
+    public String getTransportType()
+    {
+        return "Transporte Aereo";
     }
     
 }

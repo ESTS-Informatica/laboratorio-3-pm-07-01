@@ -27,6 +27,28 @@ public class GroundTransportation extends Transport
     @Override
     public double getFees() 
     {
-        return this.fees * 0.03 ;
+        return super.price * 0.03 ;
+    }
+    
+    public double getPriceWithFees()
+    {
+        return super.price + getFees();
+    }
+    
+    @Override
+    public String getTransportType()
+    {
+        return "Transporte Terrestre";
+    }
+    
+    @Override
+    public String toString()
+    {
+        final StringBuilder sb = new StringBuilder();
+        
+        sb.append(super.toString());
+        sb.append(String.format("%15s: %s\n", "Matricula", this.licensePlate));
+        
+        return sb.toString();
     }
 }
