@@ -53,4 +53,16 @@ public class AirTransportation extends Transport
         return "Transporte Aereo";
     }
     
+    @Override
+    public String toString()
+    {
+        final StringBuilder sb = new StringBuilder();
+        
+        sb.append(super.toString());
+        sb.append(String.format("%15s: %s\n", "Nome", this.name));
+        sb.append(String.format("%15s: %d\n", "NºContentores", this.numberOfContainers));
+        
+        return sb.toString();
+    }
+    
 }
